@@ -10,6 +10,7 @@
 https://developers.amadeus.com/self-service/apis-docs/guides/authorization
 
 При первом запуске происходит загрузка таблиц с IATA кодами городов и аэропортов. (ROOM + Retrofit)
+Таблицы с городами и аэропортами используются в AirportSearchFragment для поиска. 
 Для навигации между фрагментами используется Navigation. 
 
 Для графического отображения сегментов перелета был создан простой CustomView - SegmentMap
