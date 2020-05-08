@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="tickets_class">
+        <item name="ECONOMY" type="string">экономкласс</item>
+        <item name="PREMIUM_ECONOMY" type="string">премиум класс</item>
+        <item name="BUSINESS" type="string">бизнес-класс</item>
+        <item name="FIRST" type="string">первый класс</item>
+    </string-array>
+</resources>

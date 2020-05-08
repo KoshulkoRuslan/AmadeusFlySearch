@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/main_graph"
+    app:startDestination="@id/startSearchFragment">
+
+    <fragment
+        android:id="@+id/startSearchFragment"
+        android:name="com.example.myapplication.ui.startSearchFragment.StartSearchFragment"
+        android:label="StartSearchFragment" >
+        <action
+            android:id="@+id/action_startSearchFragment_to_searchFragment2"
+            app:destination="@id/searchFragmentFromTo" />
+        <argument
+            android:name="TAG"
+            app:argType="string"
+            android:defaultValue="NULL" />
+        <action
+            android:id="@+id/action_startSearchFragment_to_flyOfferResultFragment"
+            app:destination="@id/flyOfferResultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragmentFromTo"
+        android:name="com.example.myapplication.ui.airportSearcFragment.SearchFragment"
+        android:label="SearchFragment" >
+        <action
+            android:id="@+id/action_searchFragment2_to_startSearchFragment"
+            app:destination="@id/startSearchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/flyOfferResultFragment"
+        android:name="com.example.myapplication.ui.flyOfferResultFragment.FlyOfferResultFragment"
+        android:label="FlyOfferResultFragment" />
+</navigation>

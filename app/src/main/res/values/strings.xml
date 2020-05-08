@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="departure">Отправление</string>
+    <string name="arrival">Прибытие</string>
+    <string name="svo_led_example">SVO - LED</string>
+    <string name="plane_icon">plane_icon</string>
+    <string name="time_duration_example">1ч 45м</string>
+    <string name="_19_20">19:20</string>
+    <string name="_20_25">20:25</string>
+    <string name="airlines_icon">airlines_icon</string>
+    <string name="led_svo">LED - SVO</string>
+    <string name="_1_45">1ч 45м</string>
+    <string name="_10_00">10:00</string>
+    <string name="_11_25">11:25</string>
+    <string name="_16_288_rub">16 288 RUB</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_main2">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="boldTextStyle">bold</string>
+</resources>
+
+

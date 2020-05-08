@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageIconTo"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:contentDescription="@string/plane_icon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_fly_to" />
+
+            <TextView
+                android:id="@+id/textTitleFlyRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:text="@string/svo_led_example"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageIconTo"
+                app:layout_constraintEnd_toStartOf="@+id/staticTextDepartureRight"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/imageIconTo" />
+
+            <TextView
+                android:id="@+id/textDurationTimeRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/time_duration_example"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="@+id/textTitleFlyRight"
+                app:layout_constraintStart_toStartOf="@+id/textTitleFlyRight"
+                app:layout_constraintTop_toBottomOf="@+id/textTitleFlyRight" />
+
+            <TextView
+                android:id="@+id/staticTextDepartureRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/departure"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageIconTo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/imageIconTo" />
+
+            <TextView
+                android:id="@+id/textDepartureTimeRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/_19_20"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="@+id/staticTextDepartureRight"
+                app:layout_constraintStart_toStartOf="@+id/staticTextDepartureRight"
+                app:layout_constraintTop_toBottomOf="@+id/staticTextDepartureRight" />
+
+            <TextView
+                android:id="@+id/sataticTextArrivalRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/arrival"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/staticTextDepartureRight"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/staticTextDepartureRight"
+                app:layout_constraintTop_toTopOf="@+id/staticTextDepartureRight" />
+
+            <TextView
+                android:id="@+id/textArrivalTimeRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/_20_25"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="@+id/sataticTextArrivalRight"
+                app:layout_constraintStart_toStartOf="@+id/sataticTextArrivalRight"
+                app:layout_constraintTop_toBottomOf="@+id/sataticTextArrivalRight" />
+
+            <com.example.myapplication.ui.flyOfferResultFragment.SegmentMap
+                android:id="@+id/segmentMapRight"
+                android:layout_width="0dp"
+                android:layout_height="21dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/sataticTextArrivalRight"
+                app:layout_constraintStart_toStartOf="@+id/textTitleFlyRight"
+                app:layout_constraintTop_toBottomOf="@+id/textDepartureTimeRight"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <ImageView
+                android:id="@+id/iconStopRight"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginEnd="8dp"
+                android:contentDescription="@string/plane_icon"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/segmentMapRight"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:srcCompat="@drawable/ic_flight_land" />
+
+            <ImageView
+                android:id="@+id/iconStartRight"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:contentDescription="@string/plane_icon"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/segmentMapRight"
+                app:layout_constraintStart_toStartOf="@+id/imageIconTo"
+                app:srcCompat="@drawable/ic_flight_takeoff" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iconStopBack"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginEnd="8dp"
+                android:contentDescription="@string/plane_icon"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/segmentMapBack"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:srcCompat="@drawable/ic_flight_land" />
+
+            <ImageView
+                android:id="@+id/iconStartBack"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:contentDescription="@string/plane_icon"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/segmentMapBack"
+                app:layout_constraintStart_toStartOf="@+id/imageIconBack"
+                app:srcCompat="@drawable/ic_flight_takeoff" />
+
+            <com.example.myapplication.ui.flyOfferResultFragment.SegmentMap
+                android:id="@+id/segmentMapBack"
+                android:layout_width="0dp"
+                android:layout_height="21dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/sataticTextArrivalBack"
+                app:layout_constraintStart_toStartOf="@+id/textTitleFlyBack"
+                app:layout_constraintTop_toBottomOf="@+id/textDepartureTimeBack" />
+
+            <ImageView
+                android:id="@+id/imageIconBack"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:contentDescription="@string/plane_icon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_fly_back" />
+
+            <TextView
+                android:id="@+id/textTitleFlyBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/led_svo"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageIconBack"
+                app:layout_constraintEnd_toStartOf="@+id/staticTextDepartureBack"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/imageIconBack" />
+
+            <TextView
+                android:id="@+id/textDurationTimeBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/_1_45"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="@+id/textTitleFlyBack"
+                app:layout_constraintStart_toStartOf="@+id/textTitleFlyBack"
+                app:layout_constraintTop_toBottomOf="@+id/textTitleFlyBack" />
+
+            <TextView
+                android:id="@+id/staticTextDepartureBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/departure"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/textTitleFlyBack"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textTitleFlyBack" />
+
+            <TextView
+                android:id="@+id/textDepartureTimeBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/_10_00"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="@+id/staticTextDepartureBack"
+                app:layout_constraintStart_toStartOf="@+id/staticTextDepartureBack"
+                app:layout_constraintTop_toBottomOf="@+id/staticTextDepartureBack" />
+
+            <TextView
+                android:id="@+id/sataticTextArrivalBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/arrival"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/staticTextDepartureBack"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/staticTextDepartureBack"
+                app:layout_constraintTop_toTopOf="@+id/staticTextDepartureBack" />
+
+            <TextView
+                android:id="@+id/textArrivalTimeBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/_11_25"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="@+id/sataticTextArrivalBack"
+                app:layout_constraintHorizontal_bias="0.545"
+                app:layout_constraintStart_toStartOf="@+id/sataticTextArrivalBack"
+                app:layout_constraintTop_toBottomOf="@+id/sataticTextArrivalBack" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iconCarrier1"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_marginStart="8dp"
+                android:contentDescription="@string/airlines_icon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/al" />
+
+            <ImageView
+                android:id="@+id/iconCarrier2"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_marginStart="16dp"
+                android:contentDescription="@string/airlines_icon"
+                android:visibility="visible"
+                app:layout_constraintStart_toEndOf="@+id/iconCarrier1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/un" />
+
+            <ImageView
+                android:id="@+id/iconCarrier3"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_marginStart="16dp"
+                android:contentDescription="@string/airlines_icon"
+                android:visibility="visible"
+                app:layout_constraintStart_toEndOf="@+id/iconCarrier2"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ut" />
+
+            <TextView
+                android:id="@+id/textTotalPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="@string/_16_288_rub"
+                android:textColor="@color/primaryDarkColor"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

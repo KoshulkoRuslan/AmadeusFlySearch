@@ -1,0 +1,30 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#448aff</item>
+        <item name="colorPrimaryDark">#005ecb</item>
+        <item name="colorAccent">#83b9ff</item>
+        <item name="colorSecondary">#83b9ff</item>
+        <item name="android:textColorPrimary">#000000</item>
+        <item name="fontFamily">@font/roboto</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+    <style name="AppBottomSheetDialogTheme"
+        parent="Theme.MaterialComponents.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+        <item name="colorPrimary">#448aff</item>
+        <item name="colorPrimaryDark">#005ecb</item>
+        <item name="colorAccent">#83b9ff</item>
+        <item name="colorSecondary">#83b9ff</item>
+    </style>
+
+    <style name="AppModalStyle"
+        parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/custom_bottom_sheet_dialog</item>
+    </style>
+
+</resources>

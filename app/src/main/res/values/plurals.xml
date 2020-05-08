@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="passengers">
+        <item quantity="zero">пассажиров</item>
+        <item quantity="one">пассажир</item>
+        <item quantity="two">пассажира</item>
+        <item quantity="few">пассажира</item>
+        <item quantity="many">пассажиров</item>
+        <item quantity="other">пассажиров</item>
+    </plurals>
+</resources>
