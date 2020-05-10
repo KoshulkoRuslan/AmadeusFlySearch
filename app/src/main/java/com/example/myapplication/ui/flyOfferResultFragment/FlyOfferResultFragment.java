@@ -17,6 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.myapplication.R;
 import com.example.myapplication.apimodels.flyOffer.FlyQueryModel;
 import com.example.myapplication.databinding.FlyOfferResultFragmentBinding;
+import com.google.android.material.transition.MaterialContainerTransform;
 
 import static com.example.myapplication.ui.startSearchFragment.StartSearchFragment.ADULT_COUNT;
 import static com.example.myapplication.ui.startSearchFragment.StartSearchFragment.BABY_COUNT;
@@ -47,6 +48,8 @@ public class FlyOfferResultFragment extends Fragment {
                 "RUB");
         vm = new ViewModelProvider(this).get(FlyOfferResultViewModel.class);
         vm.setQueryModel(queryModel);
+        MaterialContainerTransform materialContainerTransform = new MaterialContainerTransform(requireContext());
+        setSharedElementEnterTransition(materialContainerTransform);
     }
 
     @Nullable
@@ -78,9 +81,6 @@ public class FlyOfferResultFragment extends Fragment {
                 binding.textError.setVisibility(View.VISIBLE);
             }
         });
-
-
-
     }
 
     private void showProgress(){

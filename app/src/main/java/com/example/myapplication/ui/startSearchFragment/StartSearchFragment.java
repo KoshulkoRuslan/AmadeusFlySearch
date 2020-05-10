@@ -88,7 +88,7 @@ public class StartSearchFragment extends Fragment {
             view.findViewById(R.id.textTo).setTransitionName("");
             view.findViewById(R.id.textFrom).setTransitionName("animationFromTo");
             FragmentNavigator.Extras extras = new FragmentNavigator.Extras.Builder()
-                    .addSharedElement(view.findViewById(R.id.textFrom), "animationFromTo")
+                    .addSharedElement(binding.textFrom, "animationFromTo")
                     .build();
             Bundle bundle = new Bundle();
             bundle.putString("TAG", "From");
@@ -100,7 +100,7 @@ public class StartSearchFragment extends Fragment {
             view.findViewById(R.id.textFrom).setTransitionName("");
             view.findViewById(R.id.textTo).setTransitionName("animationFromTo");
             FragmentNavigator.Extras extras = new FragmentNavigator.Extras.Builder()
-                    .addSharedElement(view.findViewById(R.id.textTo), "animationFromTo")
+                    .addSharedElement(binding.textTo, "animationFromTo")
                     .build();
             Bundle bundle = new Bundle();
             bundle.putString("TAG", "To");
@@ -123,7 +123,11 @@ public class StartSearchFragment extends Fragment {
             arg.putInt(CHILD_COUNT,queryModel.getChildren());
             arg.putInt(BABY_COUNT,queryModel.getInfants());
             arg.putString(TRAVEL_CLASS,queryModel.getTravelClass());
-            Navigation.findNavController(getActivity(),R.id.nav_host_fragment).navigate(R.id.action_startSearchFragment_to_flyOfferResultFragment,arg,null,null);
+            FragmentNavigator.Extras extras = new FragmentNavigator.Extras.Builder()
+                    .addSharedElement(binding.searchButton, "animationToResultFragment")
+                    .build();
+
+            Navigation.findNavController(getActivity(),R.id.nav_host_fragment).navigate(R.id.action_startSearchFragment_to_flyOfferResultFragment,arg,null,extras);
 
         });
 

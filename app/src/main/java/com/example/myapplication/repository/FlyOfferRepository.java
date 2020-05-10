@@ -2,15 +2,12 @@ package com.example.myapplication.repository;
 
 import android.content.Context;
 import android.widget.Toast;
-
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
-
 import com.example.myapplication.FlyOfferApi;
 import com.example.myapplication.apimodels.flyOffer.FlyQueryModel;
 import com.example.myapplication.apimodels.flyOffer.FlySearchModel;
 import com.example.myapplication.databases.FlyOfferBase;
-
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -28,7 +25,6 @@ public class FlyOfferRepository {
 
     public LiveData<FlySearchModel> getFlyOffers(FlyQueryModel queryModel){
         MutableLiveData<FlySearchModel> liveData = new MutableLiveData<>();
-
         FlyOfferApi flyOfferApi = retrofit.create(FlyOfferApi.class);
         flyOfferApi.getFlyOffer(queryModel.getOriginLocationCode(),
                 queryModel.getDestinationLocationCode(),
