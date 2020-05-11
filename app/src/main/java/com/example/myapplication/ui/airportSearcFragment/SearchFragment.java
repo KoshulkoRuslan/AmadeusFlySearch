@@ -65,8 +65,6 @@ public class SearchFragment extends Fragment {
 
 
 
-
-
         editText.setFocusableInTouchMode(true);
         editText.requestFocus();
         InputMethodManager inputMethodManager = (InputMethodManager) getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
