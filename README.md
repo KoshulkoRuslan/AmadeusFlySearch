@@ -1,4 +1,6 @@
 # AmadeusFlySearch
+Для правильной работы приложения необходимо заменить API_KEY и API_SECRET в build.gradle
+
 Приложение для поиска авиабилетов. В качестве REST сервера используется тестовый API системы бронирования AMADEUS https://developers.amadeus.com/
 Приложение состоит из трех экранов: 
 -Главный фрагмент с полями для поиска (StartSearchFragment)
